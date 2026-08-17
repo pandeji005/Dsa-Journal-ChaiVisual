@@ -10,6 +10,5 @@ class Solution {
             else r--;
         }
         return max;
-        
     }
 }
