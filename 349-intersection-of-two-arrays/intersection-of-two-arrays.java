@@ -8,7 +8,6 @@ class Solution {
         for(int n : nums2){
             if(set.contains(n)){
                 res.add(n);
-                set.remove(n);
             }
         }
         int[] o = new int[res.size()];
@@ -16,7 +15,6 @@ class Solution {
         for(int n : res){
             o[i++]=n;
         }
-        return o;
-        
+        return o; 
     }
 }
