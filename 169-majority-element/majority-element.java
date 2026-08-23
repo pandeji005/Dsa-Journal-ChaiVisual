@@ -1,6 +1,6 @@
 class Solution {
     public int majorityElement(int[] nums) {
-        int count = 1;
+        int count=1;
         int maj=nums[0];
         for(int i=1;i<nums.length;i++){
             if(count==0){
@@ -10,6 +10,5 @@ class Solution {
             else count--;
         }
         return maj;
-        
     }
 }
