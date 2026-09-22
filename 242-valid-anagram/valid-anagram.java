@@ -6,9 +6,6 @@ class Solution {
         Arrays.sort(ch1);
         Arrays.sort(ch2);
 
-        String s1 = new String(ch1);
-        String s2 = new String(ch2);
-
-        return s1.equals(s2);
+        return Arrays.equals(ch1,ch2);
     }
 }
