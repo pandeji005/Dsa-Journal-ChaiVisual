@@ -1,12 +1,13 @@
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
-        HashMap<String , ArrayList<String>> hash = new HashMap<>();
-        for(String x : strs){
-            char[] ch = x.toCharArray();
+        HashMap<String,ArrayList<String>> hash = new HashMap<>();
+        for(String s : strs){
+            char[] ch = s.toCharArray();
             Arrays.sort(ch);
-            String s1 = new String(ch);
-            if(!hash.containsKey(s1)) hash.put(s1,new ArrayList<>());
-            hash.get(s1).add(x);
+            String x = new String(ch); //sorted string Ex : aet; 
+            //each sorted string has a list associated with unsorted string;
+            if(!hash.containsKey(x)) hash.put(x,new ArrayList<>());
+            hash.get(x).add(s);
         }
         return new ArrayList<>(hash.values());
     }
